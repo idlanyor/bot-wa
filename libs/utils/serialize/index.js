@@ -1,4 +1,4 @@
-const { WAMessage, WASocket, getContentType } = require('@adiwajshing/baileys')
+const { WAMessage, WASocket, getContentType } = require('@whiskeysockets/baileys')
 const { downloadMedia } = require('..')
 const collector = require('@libs/constants/collector')
 

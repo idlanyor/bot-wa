@@ -8,7 +8,7 @@ module.exports = {
     description: 'Jadwal sholat',
     minArgs: 1,
     expectedArgs: '<daerah>',
-    example: '{prefix}{command} yogyakarta',
+    example: '{prefix}{command} Purbalingga',
     callback: async ({ msg, args }) => {
         return api('lolhuman')
             .get(`/api/sholat/${args[0]}`)

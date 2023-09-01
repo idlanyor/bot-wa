@@ -1,4 +1,4 @@
-const { proto, downloadContentFromMessage } = require('@adiwajshing/baileys')
+const { proto, downloadContentFromMessage } = require('@whiskeysockets/baileys')
 
 /**
  *

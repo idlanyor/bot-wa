@@ -1,4 +1,4 @@
-import { MessageUpdateType, WAMessage, WASocket } from '@adiwajshing/baileys'
+import { MessageUpdateType, WAMessage, WASocket } from '@whiskeysockets/baileys'
 import { Serialize } from '@libs/utils/serialize'
 import { EventEmitter } from 'events'
 

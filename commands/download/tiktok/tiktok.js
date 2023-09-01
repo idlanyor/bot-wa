@@ -13,7 +13,7 @@ module.exports = {
     example: '{prefix}{command} https://vt.tiktok.com/ZSwWCk5o/',
     callback: async ({ msg, args }) => {
         return api('lolhuman')
-            .get('/api/tiktok2', {
+            .get('/api/tiktok', {
                 params: {
                     url: args[0],
                 },

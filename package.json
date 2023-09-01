@@ -11,7 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@adiwajshing/baileys": "^4.4.0",
+        "@whiskeysockets/baileys": "^6.4.1",
         "@adiwajshing/keyed-db": "^0.2.4",
         "axios": "^0.27.2",
         "chalk": "^4.1.2",

@@ -1,4 +1,4 @@
-const { MessageUpdateType, WAMessage, WASocket, getContentType } = require('@adiwajshing/baileys')
+const { MessageUpdateType, WAMessage, WASocket, getContentType } = require('@whiskeysockets/baileys')
 const { EventEmitter } = require('events')
 
 class MessageCollector extends EventEmitter {

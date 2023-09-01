@@ -1,4 +1,4 @@
-const { Chat, Contact, BaileysEventEmitter } = require('@adiwajshing/baileys/lib/Types')
+const { Chat, Contact, BaileysEventEmitter } = require('@whiskeysockets/baileys/lib/Types')
 const logger = require('@libs/utils/logger')
 const KeyedDB = require('@adiwajshing/keyed-db').default
 

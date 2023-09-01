@@ -1,4 +1,4 @@
-import { GroupMetadata, MessageType, proto, WAMediaUpload, WAMessage, WASocket } from '@adiwajshing/baileys'
+import { GroupMetadata, MessageType, proto, WAMediaUpload, WAMessage, WASocket } from '@whiskeysockets/baileys'
 
 interface MessageQuote {
     key?: { id: string; fromMe: boolean; remoteJid: string }

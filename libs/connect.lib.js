@@ -1,4 +1,4 @@
-const { default: WASocket, fetchLatestBaileysVersion, useMultiFileAuthState, DisconnectReason, Browsers, fetchLatestWaWebVersion } = require('@adiwajshing/baileys')
+const { default: WASocket, fetchLatestBaileysVersion, useMultiFileAuthState, DisconnectReason, Browsers, fetchLatestWaWebVersion } = require('@whiskeysockets/baileys')
 const { Utility } = require('./utils/utility')
 const logger = require('./utils/logger')
 const { sessionName } = require('@config')

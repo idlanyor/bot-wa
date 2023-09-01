@@ -1,4 +1,4 @@
-const { getContentType, MessageUpdateType, WAMessage, WASocket } = require('@adiwajshing/baileys')
+const { getContentType, MessageUpdateType, WAMessage, WASocket } = require('@whiskeysockets/baileys')
 const { commands } = require('@libs/constants/command')
 
 const { serialize } = require('@libs/utils/serialize')
