@@ -1,0 +1,9 @@
+---
+app_version: 1
+branches:
+  master:
+    domain: roidev.my.id
+    document_root: public
+    entry_points:
+      - entry_point: node app.js
+    ssl_redirect: false
