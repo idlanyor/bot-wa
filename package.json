@@ -11,8 +11,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@whiskeysockets/baileys": "^6.4.1",
         "@adiwajshing/keyed-db": "^0.2.4",
+        "@open-wa/wa-automate": "^4.66.3",
+        "@whiskeysockets/baileys": "^6.4.1",
         "axios": "^0.27.2",
         "chalk": "^4.1.2",
         "dotenv": "^16.0.1",

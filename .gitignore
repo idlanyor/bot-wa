@@ -7,3 +7,9 @@ baileys_store.json
 config.json
 database/*.db
 test/
+
+# managed
+**.data.json
+**.node-persist**
+**_IGNORE_**
+# end managed
