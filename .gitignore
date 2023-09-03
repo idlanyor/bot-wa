@@ -7,6 +7,9 @@ baileys_store.json
 config.json
 database/*.db
 test/
+yarn.lock
+Case-WA-bot
+Case-WA-MD
 
 # managed
 **.data.json

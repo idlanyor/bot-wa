@@ -4,6 +4,7 @@ const api = require('@libs/utils/api')
  * @type { import('@libs/builders/command').ICommand }
  */
 module.exports = {
+    aliases: ['asma99', 'asmaulhusna'],
     category: 'islami',
     description: 'Random Asmaul Husna',
     callback: async ({ msg, args }) => {

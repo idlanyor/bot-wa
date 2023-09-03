@@ -16,7 +16,7 @@ module.exports = {
         }
 
         const { data } = await api('lolhuman').get('/api/tebak/asahotak').catch(console.error)
-        let question = await msg.reply('{question}\n\nTime 60 seconds!'.format({ question: data.result.pertanyaan }))
+        let question = await msg.reply(`${data.result.pertanyaan}\n\nTime 60 seconds!`.format({ question: data.result.pertanyaan }))
 
         _collection.set(msg.from, question)
 

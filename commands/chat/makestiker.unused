@@ -1,0 +1,42 @@
+const api = require('@libs/utils/api');
+const sharp = require('sharp'); // Mengimpor pustaka sharp
+const axios = require('axios'); // Mengimpor pustaka sharp
+
+/**
+ * @type { import('@libs/builders/command').ICommand }
+ */
+module.exports = {
+  aliases: ['stik', 'mintastiker'],
+  category: 'stiker',
+  description: 'Get Sticker Whatsapp.',
+  waitMessage: true,
+  minArgs: 1,
+  expectedArgs: '<query>',
+  example: '{prefix}{command} spongebob',
+  callback: async ({ msg, fullArgs, client }) => {
+    try {
+      let { data } = await api('lolhuman').get('/api/stickerwa', { params: { query: fullArgs } });
+      let limitData = data.result.slice(0, 1); // Ubah angka 1 untuk menampilkan seberapa banyak data yang ingin Anda tampilkan
+
+      // Loop melalui setiap objek dalam limitData
+      for (const item of limitData) {
+        // Loop melalui setiap sticker dalam objek
+        for (const stickerUrl of item.stickers) {
+          // Mengunduh stiker dalam format PNG dari URL
+          const buffer = await axios.get(stickerUrl, { responseType: 'arraybuffer' });
+
+          // Mengonversi stiker dari PNG ke WebP dengan sharp
+          const webpBuffer = await sharp(buffer.data)
+            .webp()
+            .toBuffer();
+
+          // Kirim stiker dalam format WebP ke obrolan
+          client.sendMessage(msg.from, { sticker: { webpBase64: webpBuffer.toString('base64') } });
+        }
+      }
+    } catch (error) {
+      console.error('Terjadi kesalahan dalam permintaan:', error);
+      await msg.reply('Terjadi kesalahan dalam permintaan. Mohon cek URL atau coba lagi nanti.');
+    }
+  },
+};

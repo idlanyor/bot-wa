@@ -4,6 +4,7 @@ const api = require('@libs/utils/api')
  * @type { import('@libs/builders/command').ICommand }
  */
 module.exports = {
+    aliases: ['js', 'shalat'],
     category: 'islami',
     description: 'Jadwal sholat',
     minArgs: 1,

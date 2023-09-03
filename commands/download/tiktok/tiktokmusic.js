@@ -13,14 +13,13 @@ module.exports = {
     example: '{prefix}{command} https://vt.tiktok.com/ZSwWCk5o/',
     callback: async ({ msg, args }) => {
         return api('lolhuman')
-            .get('/api/tiktok2', {
+            .get('/api/tiktokmusic', {
                 params: {
                     url: args[0],
                 },
-                responseType: 'arraybuffer',
             })
             .then(({ data }) => {
-                return msg.replyAudio(data)
+                return msg.replyAudio({ url: data.result })
             })
     },
 }

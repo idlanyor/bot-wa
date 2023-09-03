@@ -10,7 +10,7 @@ module.exports = {
     waitMessage: true,
     minArgs: 1,
     expectedArgs: '<link>',
-    example: '{prefix}{command} https://www.instagram.com/p/CU0MhPjBZO2/',
+    example: '{prefix}{command} https://www.instagram.com/reel/Cwke4-6IV6U',
     callback: async ({ msg, args }) => {
         return api('lolhuman')
             .get('/api/instagram', {

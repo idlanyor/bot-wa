@@ -44,8 +44,8 @@ module.exports = {
             `➣ .ytmp3\n` +
             `➣ .ytmp4\n` +
             `\n *TIKTOK* \n` +
-            `➣ .tiktok\n` +
-            `➣ .tiktokmusic\n` +
+            `➣ .tt(Tiktok No WM)\n` +
+            `➣ .tta(Tiktok Audio Download)\n` +
             `\n *CHECKER* \n` +
             `➣ .cekpln(Cek Tagihan Listrik)\n` +
             `➣ .cekresi(Check Resi )\n` +
@@ -75,7 +75,7 @@ module.exports = {
             //     { index: 2, quickReplyButton: { displayText: 'Menu Komplit', id: prefix + 'help listmenu' } },
             // ],
             viewOnce: true,
-            mentions: [msg.sender],
+            // mentions: [msg.sender],
         })
     },
 }

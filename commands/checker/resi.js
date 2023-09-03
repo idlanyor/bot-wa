@@ -2,6 +2,7 @@ const api = require('@libs/utils/api')
 
 module.exports = {
   category: 'checker',
+  aliases: ['cr', 'cekresi'],
   description: 'Resi Checker',
   waitMessage: true,
   minArgs: 1,
@@ -17,7 +18,7 @@ module.exports = {
       .then(async ({ data }) => {
         let history = data.result.history
         let resultHistory = ''
-        await history.forEach(( resi ) => {
+        await history.forEach((resi) => {
           resultHistory += `\n${resi.note}\n${resi.time}\n`
         })
         await msg.reply(`

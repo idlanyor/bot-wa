@@ -19,7 +19,7 @@ module.exports = {
                 },
             })
             .then(({ data }) => {
-                return msg.replyVideo({ url: data.result })
+                return msg.replyVideo({ url: data.result[0] })
             })
     },
 }
