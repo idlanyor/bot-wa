@@ -38,33 +38,45 @@ module.exports = {
             `*CHAT GPT* \n` +
             `➣ .gpt(GPT Turbo 3.5)\n` +
             `➣ .chat(GPT Standar)\n` +
+            `*ISLAMI* \n` +
+            `➣ .asmaulhusna(Random Asmaul Husna)\n` +
+            `➣ .jadwalsholat(Jadwal Sholat Indonesia)\n` +
+            `➣ .kisahnabi(Kisah 25 Nabi)\n` +
             `\n *YOUTUBE* \n` +
-            `➣ .yts\n` +
-            `➣ .play\n` +
-            `➣ .ytmp3\n` +
-            `➣ .ytmp4\n` +
+            `➣ .yts(Search YouTube)\n` +
+            `➣ .play(Play YouTube Video)\n` +
+            `➣ .ytmp3(YouTube to MP3)\n` +
+            `➣ .ytmp4(YouTube to MP4)\n` +
             `\n *TIKTOK* \n` +
-            `➣ .tt(Tiktok No WM)\n` +
-            `➣ .tta(Tiktok Audio Download)\n` +
+            `➣ .tt(TikTok No Watermark)\n` +
+            `➣ .tta(TikTok Audio Download)\n` +
             `\n *CHECKER* \n` +
             `➣ .cekpln(Cek Tagihan Listrik)\n` +
-            `➣ .cekresi(Check Resi )\n` +
+            `➣ .cekresi(Cek Resi)\n` +
             `\n *EDUKASI* \n` +
             `➣ .brainly(Brainly)\n` +
             `➣ .kbbi(Kamus Besar Bahasa Indonesia)\n` +
             `➣ .rg(RoboGuru)\n` +
             `➣ .wiki(Wikipedia)\n` +
             `\n *ANIME* \n` +
-            `➣ .anisearch(Cari anime berdasarkan judul)\n` +
-            `➣ .animg(Cari anime berdasarkan gambar)\n` +
-            `➣ .otakudesu(Dapatkan detail dan link download)\n` +
+            `➣ .anisearch(Cari Anime berdasarkan Judul)\n` +
+            `➣ .animg(Cari Anime berdasarkan Gambar Scene)\n` +
+            `➣ .otakudesu(Dapatkan detail dan link download Anime dari Otakudesu)--maintenance\n` +
             `\n *MEME* \n` +
-            `➣ .cmm(Change My Mind)\n` +
-            `\n *YOUTUBE* \n` +
-            `➣ .checker\n` +
+            `➣ .cmm(Change My Mind Meme Generator) --maintenance\n` +
+            `\n *UTILITAS* \n` +
+            `➣ .checker(Cek Informasi) maintenance\n` +
+            `\n *FUN GAME* \n` +
+            `➣ .asahotak(Teka Teki Asah Otak)\n` +
+            `➣ .caklontong(TTS Cak Lontong)\n` +
+            `➣ .jenaka(Teka Teki Jenaka)\n` +
+            `➣ .kata(Tebak Kata)\n` +
+            `➣ .susunkata(Permainan Menyusun Kata)\n` +
+            `➣ .tebakgambar(Tebak Gambar)\n` +
             `\nCatatan:\n` +
-            `Perlakukan bot secara baik, dev akan bertindak tegas apabila user melanggar rules.\n` +
-            `_Butuh bantuan? hubungi ${config.ownerName} https://wa.me/${config.ownerNumber}_`
+            `Perlakukan bot dengan baik, developer akan bertindak tegas apabila user melanggar aturan.\n` +
+            `_Nemuin bug? Hubungi developer di https://wa.me/${config.ownerNumber}_`
+
 
         return client.sendMessage(msg.from, {
             text,

@@ -10,6 +10,10 @@ test/
 yarn.lock
 Case-WA-bot
 Case-WA-MD
+argon-dashboard-tailwind
+argon-dashboard-nodejs
+notus-nextjs
+roidev-tools-next
 
 # managed
 **.data.json

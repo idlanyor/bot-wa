@@ -8,7 +8,7 @@ const apiBaseUrl = {
 const apiKey = {
     lolhuman: {
         key: 'apikey',
-        value: 'roiwithzakiya',
+        value: config.apikey,
     },
 }
 

@@ -4,7 +4,7 @@ const api = require('@libs/utils/api')
  * @type { import('@libs/builders/command').ICommand }
  */
 module.exports = {
-  aliases: ['gpt', 'chatgpt'],
+  aliases: ['gpt2', 'chatgpt2'],
   category: 'Chat',
   description: 'ChatGPT 3.5 Turbo.',
   waitMessage: true,
@@ -13,7 +13,7 @@ module.exports = {
   example: '{prefix}{command} buatkan kode program javascript',
   callback: async ({ msg, fullArgs }) => {
     try {
-      let { data } = await api('lolhuman').get('/api/openai-turbo', { params: { text: fullArgs } });
+      let { data } = await api('lolhuman').get('/api/openai-turbo', { params: { text: fullArgs, system: msg.body } });
       await msg.reply(`*[Chat GPT]* \n Hasil : \n ${data.result}`);
     } catch (error) {
       console.error('Terjadi kesalahan dalam permintaan:', error);
