@@ -1,43 +1,37 @@
-const config = require('@config');
-const axios = require('axios').default;
-const i18n = require('i18n');
+// const config = require('@config');
+// const axios = require('axios').default;
+// const i18n = require('i18n');
 
-const gpt3 = axios.create({
-    baseURL: 'https://api.openai.com/v1/chat/completions',
-    headers: {
-        'Authorization': 'Bearer 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'
-    }
-});
+
 
 /**
  * @type { import('@libs/builders/command').ICommand }
  */
 module.exports = {
-    aliases: ['gpt3'], // Menggunakan alias 'gpt3' untuk memanggil command
-    category: 'gpt3',
-    description: 'Generate text using GPT-3', // Deskripsi command
-    waitMessage: 'Please wait, calling GPT-3...', // Pesan yang ditampilkan saat menunggu respon
-    callback: async ({ msg, fullArgs }) => {
+    aliases: ['yta', 'ytaudio'],
+    category: 'youtube',
+    description: 'Youtube audio downloader.',
+    waitMessage: true,
+    minArgs: 1,
+    expectedArgs: '<link>',
+    example: '{prefix}{command} https://www.youtube.com/watch?v=eZskFo64rs8',
+    callback: async ({ msg, args }) => {
         try {
-            // Buat permintaan ke endpoint GPT-3 dengan data yang sesuai
-            const response = await gpt3.post('', {
-                model: 'gpt-3.5-turbo', // Model GPT-3 yang ingin digunakan
-                messages: [
-                    {
-                        role: 'user',
-                        content: fullArgs,
-                    },
-                ],
-            });
-            
-            // Tanggapi respons dari API GPT-3 sesuai dengan kebutuhan Anda
-            const generatedText = response.data.choices[0].message.content;
-            
-            // Kirim pesan yang dihasilkan dari GPT-3 ke pengguna
-            msg.reply(generatedText);
+            let { data } = await api('lolhuman').get('/api/ytaudio2', { params: { url: args[0] } });
+            await msg.replyImage({ url: data.result.thumbnail }, `${data.result.title}`);
+            await msg.replyAudio({ url: data.result.link });
+            // await msg.replySticker({ url:})
         } catch (error) {
-            console.error('Error:', error.response ? error.response.data : error.message);
-            msg.reply('An error occurred while calling GPT-3.');
+            console.error('Terjadi kesalahan dalam permintaan:', error);
+            await msg.reply('Terjadi kesalahan dalam permintaan. Mohon cek URL atau coba lagi nanti.');
         }
     },
 };
+// if (args.length == 0) return reply(`Example: ${prefix + command} Koceng Imot`)
+// query = args.join(" ")
+// get_result = await fetchJson(`https://api.lolhuman.xyz/api/stickerwa?apikey=${apikey}&query=${query}`)
+// get_result = get_result.result[0].stickers
+// for (var x of get_result) {
+//     ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebp?apikey=${apikey}&img=${x}`)
+//     await lolhuman.sendMessage(from, ini_buffer, sticker)
+// }

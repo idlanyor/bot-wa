@@ -87,7 +87,7 @@ module.exports = {
             //     { index: 2, quickReplyButton: { displayText: 'Menu Komplit', id: prefix + 'help listmenu' } },
             // ],
             viewOnce: true,
-            // mentions: [msg.sender],
+            mentions: [msg.sender],
         })
     },
 }
